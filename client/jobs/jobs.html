@@ -1,0 +1,17 @@
+<template name="jobsNew">
+    <div class="container">
+    {{> quickForm collection="Jobs" id="insertJobs" type="insert"}}
+    </div>
+</template>
+
+<template name="jobs">
+<div class="container">
+    {{> reactiveTable settings=settings}}
+</div>
+</template>
+
+<template name="jobsEdit">
+    <div class="container">
+        {{> quickForm collection="Jobs" doc=thisDoc id="updateBookForm" type="update"}}
+    </div>
+</template>

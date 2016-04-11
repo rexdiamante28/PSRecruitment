@@ -1,0 +1,18 @@
+<template name="careers">
+    <div class="container">
+        {{#each openJobs}}
+            <h1>{{jobTitle}}</h1> <br> <br>
+            {{{jobDescription}}}
+           <br>
+            <a href="/careers/{{_id}}">Apply Now</a>
+        {{/each}}
+
+
+    </div>
+</template>
+
+<template name="applyNow">
+    <div class="container">
+        {{> quickForm collection="Applicants" id="insertApplicants" type="insert"}}
+    </div>
+</template>
